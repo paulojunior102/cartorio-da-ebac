@@ -121,54 +121,67 @@ int main()
 {
 	int opcao=0; // definindo variáveis
 	int laco=1;
+	char senhadigitada[]="a";
+	int comparacao;
 	
-	for(laco=1;laco=1;)
+	setlocale(LC_ALL, "portuguese_brazil"); // definido linguagem
+	
+	printf("\n\t\t\t\ <---===== Cartório da Escola Britânica de Artes Criativas e Tecnologia(EBAC) =====--->\n\n");
+	printf("\t > Login de administrador!\n\n \t > Digite a sua senha:");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
 	{
+		system ("cls");
+	   for(laco=1;laco=1;)
+	   {
 		
-		system("cls");
+	    	system("cls");
 	
-	  setlocale(LC_ALL, "portuguese_brazil"); // definido linguagem
+	     setlocale(LC_ALL, "portuguese_brazil"); // definido linguagem
 	
-	    printf("\n\t\t\t\ <---===== Cartório da Escola Britânica de Artes Criativas e Tecnologia(EBAC) =====--->\n\n");
-	    printf("\t\t\t\t\t\t <=== SEJA BEM VINDO ===>\n\n");
-    	printf("------------------------------------------------------------------------------------------------------------------------\n\n");
-    	printf("\t|| Olá, escolha a opção desejada :\n\n");
-	    printf("\t(1) - Registrar nomes :\n\n");
-     	printf("\t(2) - Consultar nomes :\n\n ");
-    	printf("\t(3) - Deletar nomes :\n\n ");
-    	printf("\t(4) - Sair do sistema");
+	     printf("\n\t\t\t\ <---===== Cartório da Escola Britânica de Artes Criativas e Tecnologia(EBAC) =====--->\n\n");
+	     printf("\t\t\t\t\t\t <=== SEJA BEM VINDO ===>\n\n");
+       	 printf("------------------------------------------------------------------------------------------------------------------------\n\n");
+    	 printf("\t|| Olá, escolha a opção desejada :\n\n");
+	     printf("\t(1) - Registrar nomes :\n\n");
+       	 printf("\t(2) - Consultar nomes :\n\n ");
+    	 printf("\t(3) - Deletar nomes :\n\n ");
+    	 printf("\t(4) - Sair do sistema");
 	
-    	scanf("%d" , &opcao); // armazenando a escolha do usuário
+    	 scanf("%d" , &opcao); // armazenando a escolha do usuário
 	
-    	system("cls"); // responsavel por "linpar" a tela
+    	 system("cls"); // responsavel por "linpar" a tela
     	
-    	switch(opcao) // inicio da seleção
-    	{
-    		case 1:
-    		registro(); // chamada de funções 
-		    break;
+    	 switch(opcao) // inicio da seleção
+    	 {
+    		 case 1:
+    		 registro(); // chamada de funções 
+		     break;
 		    
-		    case 2:
-		    consultar();
-		    break;
+		     case 2:
+		     consultar();
+		     break;
 			
-			case 3:
-			deletar();
-			break;
+		 	 case 3:
+			 deletar();
+			 break;
 			
-			case 4:
-			printf("Obrigado por utilizar o programa!\n");
-			return 0;
-			break;
+			 case 4:
+			 printf("Obrigado por utilizar o programa!\n");
+			 return 0;
+			 break;
 			
-			default:
-			printf("Essa opção não está disponivel!.Tente novamente!\n");
-	    	system("pause");
-			break; // fim da seleção 	
-		}
-    	
-    	
-	
+			 default:
+			 printf("Essa opção não está disponivel!.Tente novamente!\n");
+	    	 system("pause");
+			 break; // fim da seleção 	
+		}   }
    }
+   
+   else
+    printf("Senha incorreta!");
 	
 }
